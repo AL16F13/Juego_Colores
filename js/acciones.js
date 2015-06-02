@@ -12,14 +12,21 @@ document.addEventListener("deviceready",function(){
 	
 	
 	
+	
 	function(msg) {alert("error "+msg);});
 	
 	$('#btnjugar').on('tap',function(){
+		
 		var pantalla = $.mobile.getScreenHeight();
+		alert('Pantalla '+ pantalla);
 		var encabezado = $('.ui-header').outerHeight(); 
+		alert('Pantalla '+ encabezado);
 		var pie = $('.ui-footer').outerHeight();
+		alert('Pantalla '+ pie);
 		var contenido = $('.ui-content').outerHeight();
+		alert('Pantalla '+ contenido);
 		var alto = (pantalla- encabezado - pie) / 2;
+		alert('Pantalla '+ alto);
 		$('.cuadro').height(alto);
 		//alert('Pantalla '+ pantalla);
 		//alert('Encabezado '+ encabezado);
