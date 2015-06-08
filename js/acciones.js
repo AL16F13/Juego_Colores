@@ -1,6 +1,12 @@
 // JavaScript Document
 $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
+	var basedatos = window.sqlitePlugin.
+	openDataBase({name: "coloresBD.db",
+	createFromLocation:1});
+	
+	
+	
 	audio = window.plugins.LowLatencyAudio;
 	audio.preloadFX ('B1','audio/C.mp3',function(){},
 	function(msg) {alert("error "+msg);});
@@ -9,24 +15,20 @@ document.addEventListener("deviceready",function(){
 	audio.preloadFX ('B3','audio/E.mp3',function(){},
 	function(msg) {alert("error "+msg);});
 	audio.preloadFX ('B4','audio/F.mp3',function(){},
-	
-	
-	
-	
 	function(msg) {alert("error "+msg);});
 	
 	$('#btnjugar').on('tap',function(){
 		
 		var pantalla = $.mobile.getScreenHeight();
-		alert('Pantalla '+ pantalla);
+		//alert('Pantalla '+ pantalla);
 		var encabezado = $('.ui-header').outerHeight(); 
-		alert('Pantalla '+ encabezado);
+		//alert('Pantalla '+ encabezado);
 		var pie = $('.ui-footer').outerHeight();
-		alert('Pantalla '+ pie);
+		//alert('Pantalla '+ pie);
 		var contenido = $('.ui-content').outerHeight();
-		alert('Pantalla '+ contenido);
+		//alert('Pantalla '+ contenido);
 		var alto = (pantalla- encabezado - pie) / 2;
-		alert('Pantalla '+ alto);
+		//alert('Pantalla '+ alto);
 		$('.cuadro').height(alto);
 		//alert('Pantalla '+ pantalla);
 		//alert('Encabezado '+ encabezado);
