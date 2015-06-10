@@ -71,6 +71,12 @@ $('#btnguardar').on('tap',function(){
 		return q.substring(1);
 	}
 	
+	
+	$('.cuadro').on('tap',function (){
+		flash($(this) );
+		audio.play($(this).attr('id'));
+	});
+	
    //$('.cuadro').on('vmousedown',function(){
 	 //  $('#pantalla').append(quien($(this).attr('id')));
 	   //$(this).addClass('pulsado');
